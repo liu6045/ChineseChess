@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="black_shi">res/black_shi.png</file>
+        <file alias="black_zu">res/black_zu.png</file>
+        <file alias="black_jiang">res/black_jiang.png</file>
+        <file alias="black_ju">res/black_ju.png</file>
+        <file alias="black_ma">res/black_ma.png</file>
+        <file alias="black_pao">res/black_pao.png</file>
+        <file alias="black_xiang">res/black_xiang.png</file>
+        <file alias="blank">res/blank.png</file>
+        <file alias="red_bing">res/red_bing.png</file>
+        <file alias="red_ju">res/red_ju.png</file>
+        <file alias="red_ma">res/red_ma.png</file>
+        <file alias="red_pao">res/red_pao.png</file>
+        <file alias="red_shi">res/red_shi.png</file>
+        <file alias="red_shuai">res/red_shuai.png</file>
+        <file alias="red_xiang">res/red_xiang.png</file>
+    </qresource>
+</RCC>
