@@ -5,15 +5,16 @@
 
 #include "MainGraphicsView.h"
 #include "ChesspieceView.h"
+#include "consts.h"
 
 #include <QDebug>
 
 MainWidget::MainWidget(QWidget *parent) : QWidget(parent),
-    m_unitLength(60)
+    m_unitLength(UNITLENGTH)
 {
     initBoardSet();
 
-    setFixedSize(1300, 800);
+    setFixedSize(WIDTH, HEIGHT);
 
     QHBoxLayout *pMainLayout = new QHBoxLayout();
     setLayout(pMainLayout);

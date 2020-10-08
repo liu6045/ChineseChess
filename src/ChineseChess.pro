@@ -23,7 +23,8 @@ HEADERS += \
     ChessboardModel.h \
     ChesspieceModel.h \
     MainWidget.h \
-    MainGraphicsView.h
+    MainGraphicsView.h \
+    consts.h
 
 RESOURCES += \
     pieces.qrc
