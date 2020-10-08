@@ -3,11 +3,11 @@
 
 #include <QGraphicsView>
 
-class MyGraphicsView : public QGraphicsView
+class MainGraphicsView : public QGraphicsView
 {
 public:
-    MyGraphicsView(QWidget *parent = Q_NULLPTR);
-    ~MyGraphicsView();
+    MainGraphicsView(QWidget *parent = Q_NULLPTR);
+    ~MainGraphicsView();
 
 protected:
     void mouseMoveEvent(QMouseEvent *event) override;

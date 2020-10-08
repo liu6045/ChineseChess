@@ -1,21 +1,21 @@
-#include "MyGraphicsView.h"
+#include "MainGraphicsView.h"
 
 #include <QMouseEvent>
 
 #include <QDebug>
 
-MyGraphicsView::MyGraphicsView(QWidget *parent):
+MainGraphicsView::MainGraphicsView(QWidget *parent):
     QGraphicsView(parent)
 {
     setMouseTracking(true);
 
 }
 
-MyGraphicsView::~MyGraphicsView()
+MainGraphicsView::~MainGraphicsView()
 {
 }
 
-void MyGraphicsView::mouseMoveEvent(QMouseEvent *event)
+void MainGraphicsView::mouseMoveEvent(QMouseEvent *event)
 {
     QPointF point = event->localPos();
     int x = point.x();

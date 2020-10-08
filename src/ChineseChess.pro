@@ -9,21 +9,21 @@ TARGET = ../../bin/ChineseChess
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    Widget.cpp \
-    MyGraphicsView.cpp \
     ChesspieceView.cpp \
     ChessboardModel.cpp \
-    ChesspieceModel.cpp
+    ChesspieceModel.cpp \
+    MainWidget.cpp \
+    MainGraphicsView.cpp
 
 DEFINES += QT_DEPRECATED_WARNINGS
 
 HEADERS += \
-    Widget.h \
-    MyGraphicsView.h \
     types.h \
     ChesspieceView.h \
     ChessboardModel.h \
-    ChesspieceModel.h
+    ChesspieceModel.h \
+    MainWidget.h \
+    MainGraphicsView.h
 
 RESOURCES += \
     pieces.qrc

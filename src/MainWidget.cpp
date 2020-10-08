@@ -1,14 +1,14 @@
-#include "Widget.h"
+#include "MainWidget.h"
 
 #include <QLayout>
 #include <QGraphicsItem>
 
-#include "MyGraphicsView.h"
+#include "MainGraphicsView.h"
 #include "ChesspieceView.h"
 
 #include <QDebug>
 
-Widget::Widget(QWidget *parent) : QWidget(parent),
+MainWidget::MainWidget(QWidget *parent) : QWidget(parent),
     m_unitLength(60)
 {
     initBoardSet();
@@ -18,7 +18,7 @@ Widget::Widget(QWidget *parent) : QWidget(parent),
     QHBoxLayout *pMainLayout = new QHBoxLayout();
     setLayout(pMainLayout);
 
-    MyGraphicsView *pGraphicsView = new MyGraphicsView();
+    MainGraphicsView *pGraphicsView = new MainGraphicsView();
     pMainLayout->addWidget(pGraphicsView);
 
     QVBoxLayout *pRightLayout = new QVBoxLayout();
@@ -61,7 +61,7 @@ Widget::Widget(QWidget *parent) : QWidget(parent),
 
 }
 
-Widget::~Widget()
+MainWidget::~MainWidget()
 {
     foreach (QGraphicsPixmapItem* pItem, m_BoardSet) {
         m_pGraphicsScene->removeItem(pItem);
@@ -71,32 +71,32 @@ Widget::~Widget()
     delete m_pGraphicsScene;
 }
 
-void Widget::drawChessPieces()
+void MainWidget::drawChessPieces()
 {
     ;;;;;
 }
 
-void Widget::onStartClicked()
+void MainWidget::onStartClicked()
 {
     foreach (QGraphicsPixmapItem* pItem, m_BoardSet) {
         m_pGraphicsScene->addItem(pItem);
     }
 }
 
-void Widget::addLine(int x1, int y1, int x2, int y2)
+void MainWidget::addLine(int x1, int y1, int x2, int y2)
 {
     QGraphicsLineItem *pLine = new QGraphicsLineItem(x1, y1, x2, y2);
     m_pGraphicsScene->addItem(pLine);
 }
 
-void Widget::addLineInChessboard(int x1, int y1, int x2, int y2)
+void MainWidget::addLineInChessboard(int x1, int y1, int x2, int y2)
 {
     if (xInChessboard(x1) && xInChessboard(x2) && yInChessboard(y1) && yInChessboard(y2)) {
         addLine(x1, y1, x2, y2);
     }
 }
 
-void Widget::addSpecialStarToPoint(int x, int y)
+void MainWidget::addSpecialStarToPoint(int x, int y)
 {
     int n = m_unitLength / 20;
 
@@ -116,7 +116,7 @@ void Widget::addSpecialStarToPoint(int x, int y)
     addLineInChessboard(xx + n, yy - n, xx + 4 * n, yy - n);
 }
 
-void Widget::addGraphicsItems()
+void MainWidget::addGraphicsItems()
 {
     addLine(0, 0, 0, m_unitLength * 9);
     addLine(m_unitLength * 8, 0, m_unitLength * 8, m_unitLength * 9);
@@ -148,17 +148,17 @@ void Widget::addGraphicsItems()
     }
 }
 
-bool Widget::xInChessboard(int x)
+bool MainWidget::xInChessboard(int x)
 {
     return x >= 0 && x <= m_unitLength * 8;
 }
 
-bool Widget::yInChessboard(int y)
+bool MainWidget::yInChessboard(int y)
 {
     return y >= 0 && y <= m_unitLength * 9;
 }
 
-void Widget::initBoardSet()
+void MainWidget::initBoardSet()
 {
     QSet<ChesspieceModel *> set = m_ChessboardModel.getAllChesspieces();
     foreach (ChesspieceModel *pChesspieceModel, set) {
@@ -166,7 +166,7 @@ void Widget::initBoardSet()
     }
 }
 
-void Widget::addToBoardSet(ChesspieceModel *pChesspieceModel)
+void MainWidget::addToBoardSet(ChesspieceModel *pChesspieceModel)
 {
     ChesspieceView oChesspieceView =
             ChesspieceViewFactory::getPieceView(pChesspieceModel->name(), pChesspieceModel->color());
