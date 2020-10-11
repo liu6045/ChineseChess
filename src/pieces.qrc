@@ -1,19 +1,19 @@
 <RCC>
     <qresource prefix="/">
-        <file alias="black_shi">res/black_shi.png</file>
-        <file alias="black_zu">res/black_zu.png</file>
-        <file alias="black_jiang">res/black_jiang.png</file>
-        <file alias="black_ju">res/black_ju.png</file>
-        <file alias="black_ma">res/black_ma.png</file>
-        <file alias="black_pao">res/black_pao.png</file>
-        <file alias="black_xiang">res/black_xiang.png</file>
+        <file alias="blackGuard">res/blackGuard.png</file>
+        <file alias="blackPawn">res/blackPawn.png</file>
+        <file alias="blackKing">res/blackKing.png</file>
+        <file alias="blackChariot">res/blackChariot.png</file>
+        <file alias="blackHorse">res/blackHorse.png</file>
+        <file alias="blackCannon">res/blackCannon.png</file>
+        <file alias="blackElephant">res/blackElephant.png</file>
         <file alias="blank">res/blank.png</file>
-        <file alias="red_bing">res/red_bing.png</file>
-        <file alias="red_ju">res/red_ju.png</file>
-        <file alias="red_ma">res/red_ma.png</file>
-        <file alias="red_pao">res/red_pao.png</file>
-        <file alias="red_shi">res/red_shi.png</file>
-        <file alias="red_shuai">res/red_shuai.png</file>
-        <file alias="red_xiang">res/red_xiang.png</file>
+        <file alias="redPawn">res/redPawn.png</file>
+        <file alias="redChariot">res/redChariot.png</file>
+        <file alias="redHorse">res/redHorse.png</file>
+        <file alias="redCannon">res/redCannon.png</file>
+        <file alias="redGuard">res/redGuard.png</file>
+        <file alias="redKing">res/redKing.png</file>
+        <file alias="redElephant">res/redElephant.png</file>
     </qresource>
 </RCC>

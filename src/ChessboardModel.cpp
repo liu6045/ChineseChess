@@ -2,74 +2,74 @@
 
 ChessboardModel::ChessboardModel()
 {
-    m_pRedJu1 = new JuChesspieceModel(Color::red, "ju1", QStringLiteral("車"));
-    m_pRedJu2 = new JuChesspieceModel(Color::red, "ju2", QStringLiteral("車"));
-    m_pRedMa1 = new MaChesspieceModel(Color::red, "ma1", QStringLiteral("馬"));
-    m_pRedMa2 = new MaChesspieceModel(Color::red, "ma2", QStringLiteral("馬"));
-    m_pRedPao1 = new PaoChesspieceModel(Color::red, "pao1", QStringLiteral("砲"));
-    m_pRedPao2 = new PaoChesspieceModel(Color::red, "pao2", QStringLiteral("砲"));
-    m_pRedXiang1 = new XiangChesspieceModel(Color::red, "xiang1", QStringLiteral("相"));
-    m_pRedXiang2 = new XiangChesspieceModel(Color::red, "xiang2", QStringLiteral("相"));
-    m_pRedShi1 = new ShiChesspieceModel(Color::red, "shi1", QStringLiteral("仕"));
-    m_pRedShi2 = new ShiChesspieceModel(Color::red, "shi2", QStringLiteral("仕"));
-    m_pRedJiang = new JiangChesspieceModel(Color::red, "jiang", QStringLiteral("帅"));
-    m_pRedZu1 = new ZuChesspieceModel(Color::red, "zu1", QStringLiteral("兵"));
-    m_pRedZu2 = new ZuChesspieceModel(Color::red, "zu2", QStringLiteral("兵"));
-    m_pRedZu3 = new ZuChesspieceModel(Color::red, "zu3", QStringLiteral("兵"));
-    m_pRedZu4 = new ZuChesspieceModel(Color::red, "zu4", QStringLiteral("兵"));
-    m_pRedZu5 = new ZuChesspieceModel(Color::red, "zu5", QStringLiteral("兵"));
+    m_pRedChariot1 = new ChariotChesspieceModel(Color::red, "Chariot1", QStringLiteral("車"));
+    m_pRedChariot2 = new ChariotChesspieceModel(Color::red, "Chariot2", QStringLiteral("車"));
+    m_pRedHorse1 = new HorseChesspieceModel(Color::red, "Horse1", QStringLiteral("馬"));
+    m_pRedHorse2 = new HorseChesspieceModel(Color::red, "Horse2", QStringLiteral("馬"));
+    m_pRedCannon1 = new CannonChesspieceModel(Color::red, "Cannon1", QStringLiteral("砲"));
+    m_pRedCannon2 = new CannonChesspieceModel(Color::red, "Cannon2", QStringLiteral("砲"));
+    m_pRedElephant1 = new ElephantChesspieceModel(Color::red, "Elephant1", QStringLiteral("相"));
+    m_pRedElephant2 = new ElephantChesspieceModel(Color::red, "Elephant2", QStringLiteral("相"));
+    m_pRedGuard1 = new GuardChesspieceModel(Color::red, "Guard1", QStringLiteral("仕"));
+    m_pRedGuard2 = new GuardChesspieceModel(Color::red, "Guard2", QStringLiteral("仕"));
+    m_pRedKing = new KingChesspieceModel(Color::red, "King", QStringLiteral("帅"));
+    m_pRedPawn1 = new PawnChesspieceModel(Color::red, "Pawn1", QStringLiteral("兵"));
+    m_pRedPawn2 = new PawnChesspieceModel(Color::red, "Pawn2", QStringLiteral("兵"));
+    m_pRedPawn3 = new PawnChesspieceModel(Color::red, "Pawn3", QStringLiteral("兵"));
+    m_pRedPawn4 = new PawnChesspieceModel(Color::red, "Pawn4", QStringLiteral("兵"));
+    m_pRedPawn5 = new PawnChesspieceModel(Color::red, "Pawn5", QStringLiteral("兵"));
 
-    m_pBlackJu1 = new JuChesspieceModel(Color::black, "ju1", QStringLiteral("車"));
-    m_pBlackJu2 = new JuChesspieceModel(Color::black, "ju2", QStringLiteral("車"));
-    m_pBlackMa1 = new MaChesspieceModel(Color::black, "ma1", QStringLiteral("馬"));
-    m_pBlackMa2 = new MaChesspieceModel(Color::black, "ma2", QStringLiteral("馬"));
-    m_pBlackPao1 = new PaoChesspieceModel(Color::black, "pao1", QStringLiteral("炮"));
-    m_pBlackPao2 = new PaoChesspieceModel(Color::black, "pao2", QStringLiteral("炮"));
-    m_pBlackXiang1 = new XiangChesspieceModel(Color::black, "xiang1", QStringLiteral("象"));
-    m_pBlackXiang2 = new XiangChesspieceModel(Color::black, "xiang2", QStringLiteral("象"));
-    m_pBlackShi1 = new ShiChesspieceModel(Color::black, "shi1", QStringLiteral("士"));
-    m_pBlackShi2 = new ShiChesspieceModel(Color::black, "shi2", QStringLiteral("士"));
-    m_pBlackJiang = new JiangChesspieceModel(Color::black, "jiang", QStringLiteral("将"));
-    m_pBlackZu1 = new ZuChesspieceModel(Color::black, "zu1", QStringLiteral("卒"));
-    m_pBlackZu2 = new ZuChesspieceModel(Color::black, "zu2", QStringLiteral("卒"));
-    m_pBlackZu3 = new ZuChesspieceModel(Color::black, "zu3", QStringLiteral("卒"));
-    m_pBlackZu4 = new ZuChesspieceModel(Color::black, "zu4", QStringLiteral("卒"));
-    m_pBlackZu5 = new ZuChesspieceModel(Color::black, "zu5", QStringLiteral("卒"));
+    m_pBlackChariot1 = new ChariotChesspieceModel(Color::black, "Chariot1", QStringLiteral("車"));
+    m_pBlackChariot2 = new ChariotChesspieceModel(Color::black, "Chariot2", QStringLiteral("車"));
+    m_pBlackHorse1 = new HorseChesspieceModel(Color::black, "Horse1", QStringLiteral("馬"));
+    m_pBlackHorse2 = new HorseChesspieceModel(Color::black, "Horse2", QStringLiteral("馬"));
+    m_pBlackCannon1 = new CannonChesspieceModel(Color::black, "Cannon1", QStringLiteral("炮"));
+    m_pBlackCannon2 = new CannonChesspieceModel(Color::black, "Cannon2", QStringLiteral("炮"));
+    m_pBlackElephant1 = new ElephantChesspieceModel(Color::black, "Elephant1", QStringLiteral("象"));
+    m_pBlackElephant2 = new ElephantChesspieceModel(Color::black, "Elephant2", QStringLiteral("象"));
+    m_pBlackGuard1 = new GuardChesspieceModel(Color::black, "Guard1", QStringLiteral("士"));
+    m_pBlackGuard2 = new GuardChesspieceModel(Color::black, "Guard2", QStringLiteral("士"));
+    m_pBlackKing = new KingChesspieceModel(Color::black, "King", QStringLiteral("将"));
+    m_pBlackPawn1 = new PawnChesspieceModel(Color::black, "Pawn1", QStringLiteral("卒"));
+    m_pBlackPawn2 = new PawnChesspieceModel(Color::black, "Pawn2", QStringLiteral("卒"));
+    m_pBlackPawn3 = new PawnChesspieceModel(Color::black, "Pawn3", QStringLiteral("卒"));
+    m_pBlackPawn4 = new PawnChesspieceModel(Color::black, "Pawn4", QStringLiteral("卒"));
+    m_pBlackPawn5 = new PawnChesspieceModel(Color::black, "Pawn5", QStringLiteral("卒"));
 
 
-    m_pRedJu1->setPos(1, 10);
-    m_pRedJu2->setPos(9, 10);
-    m_pRedMa1->setPos(2, 10);
-    m_pRedMa2->setPos(8, 10);
-    m_pRedPao1->setPos(2, 8);
-    m_pRedPao2->setPos(8, 8);
-    m_pRedXiang1->setPos(3, 10);
-    m_pRedXiang2->setPos(7, 10);
-    m_pRedShi1->setPos(4, 10);
-    m_pRedShi2->setPos(6, 10);
-    m_pRedJiang->setPos(5, 10);
-    m_pRedZu1->setPos(1, 7);
-    m_pRedZu2->setPos(3, 7);
-    m_pRedZu3->setPos(5, 7);
-    m_pRedZu4->setPos(7, 7);
-    m_pRedZu5->setPos(9, 7);
+    m_pRedChariot1->setPos(1, 10);
+    m_pRedChariot2->setPos(9, 10);
+    m_pRedHorse1->setPos(2, 10);
+    m_pRedHorse2->setPos(8, 10);
+    m_pRedCannon1->setPos(2, 8);
+    m_pRedCannon2->setPos(8, 8);
+    m_pRedElephant1->setPos(3, 10);
+    m_pRedElephant2->setPos(7, 10);
+    m_pRedGuard1->setPos(4, 10);
+    m_pRedGuard2->setPos(6, 10);
+    m_pRedKing->setPos(5, 10);
+    m_pRedPawn1->setPos(1, 7);
+    m_pRedPawn2->setPos(3, 7);
+    m_pRedPawn3->setPos(5, 7);
+    m_pRedPawn4->setPos(7, 7);
+    m_pRedPawn5->setPos(9, 7);
 
-    m_pBlackJu1->setPos(1, 1);
-    m_pBlackJu2->setPos(9, 1);
-    m_pBlackMa1->setPos(2, 1);
-    m_pBlackMa2->setPos(8, 1);
-    m_pBlackPao1->setPos(2, 3);
-    m_pBlackPao2->setPos(8, 3);
-    m_pBlackXiang1->setPos(3, 1);
-    m_pBlackXiang2->setPos(7, 1);
-    m_pBlackShi1->setPos(4, 1);
-    m_pBlackShi2->setPos(6, 1);
-    m_pBlackJiang->setPos(5, 1);
-    m_pBlackZu1->setPos(1, 4);
-    m_pBlackZu2->setPos(3, 4);
-    m_pBlackZu3->setPos(5, 4);
-    m_pBlackZu4->setPos(7, 4);
-    m_pBlackZu5->setPos(9, 4);
+    m_pBlackChariot1->setPos(1, 1);
+    m_pBlackChariot2->setPos(9, 1);
+    m_pBlackHorse1->setPos(2, 1);
+    m_pBlackHorse2->setPos(8, 1);
+    m_pBlackCannon1->setPos(2, 3);
+    m_pBlackCannon2->setPos(8, 3);
+    m_pBlackElephant1->setPos(3, 1);
+    m_pBlackElephant2->setPos(7, 1);
+    m_pBlackGuard1->setPos(4, 1);
+    m_pBlackGuard2->setPos(6, 1);
+    m_pBlackKing->setPos(5, 1);
+    m_pBlackPawn1->setPos(1, 4);
+    m_pBlackPawn2->setPos(3, 4);
+    m_pBlackPawn3->setPos(5, 4);
+    m_pBlackPawn4->setPos(7, 4);
+    m_pBlackPawn5->setPos(9, 4);
 }
 
 QSet<ChesspieceModel *> ChessboardModel::getAllChesspieces()
@@ -91,22 +91,22 @@ QSet<ChesspieceModel *> ChessboardModel::getAllChesspieces()
 QSet<ChesspieceModel *> ChessboardModel::getAllRedChesspieces()
 {
     QSet<ChesspieceModel *> result;
-    result.insert(m_pRedJu1);
-    result.insert(m_pRedJu2);
-    result.insert(m_pRedMa1);
-    result.insert(m_pRedMa2);
-    result.insert(m_pRedPao1);
-    result.insert(m_pRedPao2);
-    result.insert(m_pRedXiang1);
-    result.insert(m_pRedXiang2);
-    result.insert(m_pRedShi1);
-    result.insert(m_pRedShi2);
-    result.insert(m_pRedJiang);
-    result.insert(m_pRedZu1);
-    result.insert(m_pRedZu2);
-    result.insert(m_pRedZu3);
-    result.insert(m_pRedZu4);
-    result.insert(m_pRedZu5);
+    result.insert(m_pRedChariot1);
+    result.insert(m_pRedChariot2);
+    result.insert(m_pRedHorse1);
+    result.insert(m_pRedHorse2);
+    result.insert(m_pRedCannon1);
+    result.insert(m_pRedCannon2);
+    result.insert(m_pRedElephant1);
+    result.insert(m_pRedElephant2);
+    result.insert(m_pRedGuard1);
+    result.insert(m_pRedGuard2);
+    result.insert(m_pRedKing);
+    result.insert(m_pRedPawn1);
+    result.insert(m_pRedPawn2);
+    result.insert(m_pRedPawn3);
+    result.insert(m_pRedPawn4);
+    result.insert(m_pRedPawn5);
 
     return result;
 }
@@ -114,22 +114,22 @@ QSet<ChesspieceModel *> ChessboardModel::getAllRedChesspieces()
 QSet<ChesspieceModel *> ChessboardModel::getAllBlackChesspieces()
 {
     QSet<ChesspieceModel *> result;
-    result.insert(m_pBlackJu1);
-    result.insert(m_pBlackJu2);
-    result.insert(m_pBlackMa1);
-    result.insert(m_pBlackMa2);
-    result.insert(m_pBlackPao1);
-    result.insert(m_pBlackPao2);
-    result.insert(m_pBlackXiang1);
-    result.insert(m_pBlackXiang2);
-    result.insert(m_pBlackShi1);
-    result.insert(m_pBlackShi2);
-    result.insert(m_pBlackJiang);
-    result.insert(m_pBlackZu1);
-    result.insert(m_pBlackZu2);
-    result.insert(m_pBlackZu3);
-    result.insert(m_pBlackZu4);
-    result.insert(m_pBlackZu5);
+    result.insert(m_pBlackChariot1);
+    result.insert(m_pBlackChariot2);
+    result.insert(m_pBlackHorse1);
+    result.insert(m_pBlackHorse2);
+    result.insert(m_pBlackCannon1);
+    result.insert(m_pBlackCannon2);
+    result.insert(m_pBlackElephant1);
+    result.insert(m_pBlackElephant2);
+    result.insert(m_pBlackGuard1);
+    result.insert(m_pBlackGuard2);
+    result.insert(m_pBlackKing);
+    result.insert(m_pBlackPawn1);
+    result.insert(m_pBlackPawn2);
+    result.insert(m_pBlackPawn3);
+    result.insert(m_pBlackPawn4);
+    result.insert(m_pBlackPawn5);
 
     return result;
 }

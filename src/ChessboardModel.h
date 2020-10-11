@@ -16,40 +16,40 @@ public:
 
 private:
     // red
-    ChesspieceModel *m_pRedJu1;
-    ChesspieceModel *m_pRedJu2;
-    ChesspieceModel *m_pRedMa1;
-    ChesspieceModel *m_pRedMa2;
-    ChesspieceModel *m_pRedPao1;
-    ChesspieceModel *m_pRedPao2;
-    ChesspieceModel *m_pRedXiang1;
-    ChesspieceModel *m_pRedXiang2;
-    ChesspieceModel *m_pRedShi1;
-    ChesspieceModel *m_pRedShi2;
-    ChesspieceModel *m_pRedJiang;
-    ChesspieceModel *m_pRedZu1;
-    ChesspieceModel *m_pRedZu2;
-    ChesspieceModel *m_pRedZu3;
-    ChesspieceModel *m_pRedZu4;
-    ChesspieceModel *m_pRedZu5;
+    ChesspieceModel *m_pRedChariot1;
+    ChesspieceModel *m_pRedChariot2;
+    ChesspieceModel *m_pRedHorse1;
+    ChesspieceModel *m_pRedHorse2;
+    ChesspieceModel *m_pRedCannon1;
+    ChesspieceModel *m_pRedCannon2;
+    ChesspieceModel *m_pRedElephant1;
+    ChesspieceModel *m_pRedElephant2;
+    ChesspieceModel *m_pRedGuard1;
+    ChesspieceModel *m_pRedGuard2;
+    ChesspieceModel *m_pRedKing;
+    ChesspieceModel *m_pRedPawn1;
+    ChesspieceModel *m_pRedPawn2;
+    ChesspieceModel *m_pRedPawn3;
+    ChesspieceModel *m_pRedPawn4;
+    ChesspieceModel *m_pRedPawn5;
 
     // black
-    ChesspieceModel *m_pBlackJu1;
-    ChesspieceModel *m_pBlackJu2;
-    ChesspieceModel *m_pBlackMa1;
-    ChesspieceModel *m_pBlackMa2;
-    ChesspieceModel *m_pBlackPao1;
-    ChesspieceModel *m_pBlackPao2;
-    ChesspieceModel *m_pBlackXiang1;
-    ChesspieceModel *m_pBlackXiang2;
-    ChesspieceModel *m_pBlackShi1;
-    ChesspieceModel *m_pBlackShi2;
-    ChesspieceModel *m_pBlackJiang;
-    ChesspieceModel *m_pBlackZu1;
-    ChesspieceModel *m_pBlackZu2;
-    ChesspieceModel *m_pBlackZu3;
-    ChesspieceModel *m_pBlackZu4;
-    ChesspieceModel *m_pBlackZu5;
+    ChesspieceModel *m_pBlackChariot1;
+    ChesspieceModel *m_pBlackChariot2;
+    ChesspieceModel *m_pBlackHorse1;
+    ChesspieceModel *m_pBlackHorse2;
+    ChesspieceModel *m_pBlackCannon1;
+    ChesspieceModel *m_pBlackCannon2;
+    ChesspieceModel *m_pBlackElephant1;
+    ChesspieceModel *m_pBlackElephant2;
+    ChesspieceModel *m_pBlackGuard1;
+    ChesspieceModel *m_pBlackGuard2;
+    ChesspieceModel *m_pBlackKing;
+    ChesspieceModel *m_pBlackPawn1;
+    ChesspieceModel *m_pBlackPawn2;
+    ChesspieceModel *m_pBlackPawn3;
+    ChesspieceModel *m_pBlackPawn4;
+    ChesspieceModel *m_pBlackPawn5;
 };
 
 #endif // CHESSBOARDMODEL_H

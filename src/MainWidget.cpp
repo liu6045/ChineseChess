@@ -119,24 +119,26 @@ void MainWidget::addSpecialStarToPoint(int x, int y)
 
 void MainWidget::addGraphicsItems()
 {
+    // draw the vertical lines
     addLine(0, 0, 0, m_unitLength * 9);
-    addLine(m_unitLength * 8, 0, m_unitLength * 8, m_unitLength * 9);
-
     for (int i = 1; i < 8; ++i) {
         addLine(m_unitLength * i, 0, m_unitLength * i, m_unitLength * 4);
         addLine(m_unitLength * i, m_unitLength * 5, m_unitLength * i, m_unitLength * 9);
     }
+    addLine(m_unitLength * 8, 0, m_unitLength * 8, m_unitLength * 9);
 
+    // draw the horizontal lines
     for (int i = 0; i < 10; ++i) {
         addLine(0, m_unitLength * i, m_unitLength * 8, m_unitLength * i);
     }
 
+    // draw the palace
     addLine(m_unitLength * 3, 0, m_unitLength * 5, m_unitLength * 2);
     addLine(m_unitLength * 5, 0, m_unitLength * 3, m_unitLength * 2);
-
     addLine(m_unitLength * 3, m_unitLength * 7, m_unitLength * 5, m_unitLength * 9);
     addLine(m_unitLength * 5, m_unitLength * 7, m_unitLength * 3, m_unitLength * 9);
 
+    // draw the special star
     addSpecialStarToPoint(1, 2);
     addSpecialStarToPoint(7, 2);
 

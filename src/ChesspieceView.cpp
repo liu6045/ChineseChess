@@ -12,60 +12,60 @@ QPixmap ChesspieceView::pixMap() const
 
 ChesspieceView ChesspieceViewFactory::getPieceView(const QString &name, const Color color)
 {
-    if (name.startsWith("ju")) {
+    if (name.startsWith("Chariot")) {
 //        if (color == Color::red) {
-            JuView result(color);
+            ChariotView result(color);
             return result;
 //        } else {
-//            static JuView result(color);
+//            static ChariotView result(color);
 //            return result;
 //        }
-    } else if (name.startsWith("ma")) {
+    } else if (name.startsWith("Horse")) {
 //        if (color == Color::red) {
-            MaView result(color);
+            HorseView result(color);
             return result;
 //        } else {
-//            static MaView result(color);
+//            static HorseView result(color);
 //            return result;
 //        }
-    } else if (name.startsWith("pao")) {
+    } else if (name.startsWith("Cannon")) {
 //        if (color == Color::red) {
-            PaoView result(color);
+            CannonView result(color);
             return result;
 //        } else {
-//            static PaoView result(color);
+//            static CannonView result(color);
 //            return result;
 //        }
-    } else if (name.startsWith("xiang")) {
+    } else if (name.startsWith("Elephant")) {
 //        if (color == Color::red) {
-            XiangView result(color);
+            ElephantView result(color);
             return result;
 //        } else {
-//            static XiangView result(color);
+//            static ElephantView result(color);
 //            return result;
 //        }
-    } else if (name.startsWith("shi")) {
+    } else if (name.startsWith("Guard")) {
 //        if (color == Color::red) {
-            ShiView result(color);
+            GuardView result(color);
             return result;
 //        } else {
-//            static ShiView result(color);
+//            static GuardView result(color);
 //            return result;
 //        }
-    } else if (name.startsWith("jiang")) {
+    } else if (name.startsWith("King")) {
 //        if (color == Color::red) {
-            JiangView result(color);
+            KingView result(color);
             return result;
 //        } else {
-//            static JiangView result(color);
+//            static KingView result(color);
 //            return result;
 //        }
-    } else if (name.startsWith("zu")) {
+    } else if (name.startsWith("Pawn")) {
 //        if (color == Color::red) {
-            ZuView result(color);
+            PawnView result(color);
             return result;
 //        } else {
-//            static ZuView result(color);
+//            static PawnView result(color);
 //            return result;
 //        }
     } else {

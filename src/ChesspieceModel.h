@@ -45,51 +45,51 @@ private:
     QString m_chineseName;
 };
 
-class JuChesspieceModel : public ChesspieceModel {
+class ChariotChesspieceModel : public ChesspieceModel {
 public:
-    JuChesspieceModel(Color color, const QString &name, const QString &chineseName);
+    ChariotChesspieceModel(Color color, const QString &name, const QString &chineseName);
 
     bool canMove(const ChessboardModel &board, int destX, int destY) override;
 };
 
-class MaChesspieceModel : public ChesspieceModel {
+class HorseChesspieceModel : public ChesspieceModel {
 public:
-    MaChesspieceModel(Color color, const QString &name, const QString &chineseName);
+    HorseChesspieceModel(Color color, const QString &name, const QString &chineseName);
 
     bool canMove(const ChessboardModel &board, int destX, int destY) override;
 };
 
-class PaoChesspieceModel : public ChesspieceModel {
+class CannonChesspieceModel : public ChesspieceModel {
 public:
-    PaoChesspieceModel(Color color, const QString &name, const QString &chineseName);
+    CannonChesspieceModel(Color color, const QString &name, const QString &chineseName);
 
     bool canMove(const ChessboardModel &board, int destX, int destY) override;
 };
 
-class XiangChesspieceModel : public ChesspieceModel {
+class ElephantChesspieceModel : public ChesspieceModel {
 public:
-    XiangChesspieceModel(Color color, const QString &name, const QString &chineseName);
+    ElephantChesspieceModel(Color color, const QString &name, const QString &chineseName);
 
     bool canMove(const ChessboardModel &board, int destX, int destY) override;
 };
 
-class ShiChesspieceModel : public ChesspieceModel {
+class GuardChesspieceModel : public ChesspieceModel {
 public:
-    ShiChesspieceModel(Color color, const QString &name, const QString &chineseName);
+    GuardChesspieceModel(Color color, const QString &name, const QString &chineseName);
 
     bool canMove(const ChessboardModel &board, int destX, int destY) override;
 };
 
-class JiangChesspieceModel : public ChesspieceModel {
+class KingChesspieceModel : public ChesspieceModel {
 public:
-    JiangChesspieceModel(Color color, const QString &name, const QString &chineseName);
+    KingChesspieceModel(Color color, const QString &name, const QString &chineseName);
 
     bool canMove(const ChessboardModel &board, int destX, int destY) override;
 };
 
-class ZuChesspieceModel : public ChesspieceModel {
+class PawnChesspieceModel : public ChesspieceModel {
 public:
-    ZuChesspieceModel(Color color, const QString &name, const QString &chineseName);
+    PawnChesspieceModel(Color color, const QString &name, const QString &chineseName);
 
     bool canMove(const ChessboardModel &board, int destX, int destY) override;
 };
