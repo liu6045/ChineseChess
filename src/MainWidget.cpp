@@ -171,15 +171,17 @@ void MainWidget::initBoardSet()
 
 void MainWidget::addToBoardSet(ChesspieceModel *pChesspieceModel)
 {
+    int gap = 2;
+
     ChesspieceView oChesspieceView =
             ChesspieceViewFactory::getPieceView(pChesspieceModel->name(), pChesspieceModel->color());
 
     QPixmap pixmap =
-            oChesspieceView.pixMap().scaled(QSize(m_unitLength, m_unitLength), Qt::KeepAspectRatio);
+            oChesspieceView.pixMap().scaled(QSize(m_unitLength - gap * 2, m_unitLength - gap * 2), Qt::KeepAspectRatio);
 
     QGraphicsPixmapItem *pItem = new QGraphicsPixmapItem(pixmap);
-    pItem->setPos(QPoint(-m_unitLength / 2 + (pChesspieceModel->x() - 1) * m_unitLength,
-                         -m_unitLength / 2 + (pChesspieceModel->y() - 1) * m_unitLength));
+    pItem->setPos(QPoint(-m_unitLength / 2 + (pChesspieceModel->x() - 1) * m_unitLength + gap,
+                         -m_unitLength / 2 + (pChesspieceModel->y() - 1) * m_unitLength + gap));
 
     int x = -m_unitLength / 2 + (pChesspieceModel->x() - 1) * m_unitLength;
     int y = -m_unitLength / 2 + (pChesspieceModel->y() - 1) * m_unitLength;
