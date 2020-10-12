@@ -2,13 +2,15 @@
 
 #include "ChessboardModel.h"
 
-ChesspieceModel::ChesspieceModel(Color color, const QString &name, const QString &chineseName):
+ChesspieceModel::ChesspieceModel(Color color, const QString &name, const QString &chineseName, int initX, int initY):
     m_color(color),
     m_name(name),
     m_chineseName(name),
+    m_initX(initX),
+    m_initY(initY),
     m_x(-1),
     m_y(-1),
-    m_alive(true)
+    m_alive(false)
 {
 }
 
@@ -34,6 +36,13 @@ void ChesspieceModel::setDeath()
 {
     setPos(-1, -1);
     setAlive(false);
+}
+
+void ChesspieceModel::reSet()
+{
+    m_x = m_initX;
+    m_y = m_initY;
+    m_alive = true;
 }
 
 int ChesspieceModel::x() const
@@ -77,8 +86,8 @@ Color ChesspieceModel::color() const
     return m_color;
 }
 
-ChariotChesspieceModel::ChariotChesspieceModel(Color color, const QString &name, const QString &chineseName):
-    ChesspieceModel(color, name, chineseName)
+ChariotChesspieceModel::ChariotChesspieceModel(Color color, const QString &name, const QString &chineseName, int initX, int initY):
+    ChesspieceModel(color, name, chineseName, initX, initY)
 {
 
 }
@@ -88,8 +97,8 @@ bool ChariotChesspieceModel::canMove(const ChessboardModel &board, int destX, in
     return true;
 }
 
-HorseChesspieceModel::HorseChesspieceModel(Color color, const QString &name, const QString &chineseName):
-    ChesspieceModel(color, name, chineseName)
+HorseChesspieceModel::HorseChesspieceModel(Color color, const QString &name, const QString &chineseName, int initX, int initY):
+    ChesspieceModel(color, name, chineseName, initX, initY)
 {
 
 }
@@ -99,8 +108,8 @@ bool HorseChesspieceModel::canMove(const ChessboardModel &board, int destX, int 
     return true;
 }
 
-CannonChesspieceModel::CannonChesspieceModel(Color color, const QString &name, const QString &chineseName):
-    ChesspieceModel(color, name, chineseName)
+CannonChesspieceModel::CannonChesspieceModel(Color color, const QString &name, const QString &chineseName, int initX, int initY):
+    ChesspieceModel(color, name, chineseName, initX, initY)
 {
 
 }
@@ -110,8 +119,8 @@ bool CannonChesspieceModel::canMove(const ChessboardModel &board, int destX, int
     return true;
 }
 
-ElephantChesspieceModel::ElephantChesspieceModel(Color color, const QString &name, const QString &chineseName):
-    ChesspieceModel(color, name, chineseName)
+ElephantChesspieceModel::ElephantChesspieceModel(Color color, const QString &name, const QString &chineseName, int initX, int initY):
+    ChesspieceModel(color, name, chineseName, initX, initY)
 {
 
 }
@@ -121,8 +130,8 @@ bool ElephantChesspieceModel::canMove(const ChessboardModel &board, int destX, i
     return true;
 }
 
-GuardChesspieceModel::GuardChesspieceModel(Color color, const QString &name, const QString &chineseName):
-    ChesspieceModel(color, name, chineseName)
+GuardChesspieceModel::GuardChesspieceModel(Color color, const QString &name, const QString &chineseName, int initX, int initY):
+    ChesspieceModel(color, name, chineseName, initX, initY)
 {
 
 }
@@ -132,8 +141,8 @@ bool GuardChesspieceModel::canMove(const ChessboardModel &board, int destX, int 
     return true;
 }
 
-KingChesspieceModel::KingChesspieceModel(Color color, const QString &name, const QString &chineseName):
-    ChesspieceModel(color, name, chineseName)
+KingChesspieceModel::KingChesspieceModel(Color color, const QString &name, const QString &chineseName, int initX, int initY):
+    ChesspieceModel(color, name, chineseName, initX, initY)
 {
 
 }
@@ -143,8 +152,8 @@ bool KingChesspieceModel::canMove(const ChessboardModel &board, int destX, int d
     return true;
 }
 
-PawnChesspieceModel::PawnChesspieceModel(Color color, const QString &name, const QString &chineseName):
-    ChesspieceModel(color, name, chineseName)
+PawnChesspieceModel::PawnChesspieceModel(Color color, const QString &name, const QString &chineseName, int initX, int initY):
+    ChesspieceModel(color, name, chineseName, initX, initY)
 {
 
 }

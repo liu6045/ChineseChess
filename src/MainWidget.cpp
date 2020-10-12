@@ -165,6 +165,7 @@ void MainWidget::initBoardSet()
 {
     QSet<ChesspieceModel *> set = m_ChessboardModel.getAllChesspieces();
     foreach (ChesspieceModel *pChesspieceModel, set) {
+        pChesspieceModel->reSet();
         addToBoardSet(pChesspieceModel);
     }
 }
