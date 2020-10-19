@@ -11,6 +11,8 @@ public:
     ChessboardModel();
 
     QSet<ChesspieceModel*> getAllChesspieces();
+
+private:
     QSet<ChesspieceModel*> getAllRedChesspieces();
     QSet<ChesspieceModel*> getAllBlackChesspieces();
 

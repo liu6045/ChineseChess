@@ -47,12 +47,12 @@ private:
     void addLine(int x1, int y1, int x2, int y2);
     void addLineInChessboard(int x1, int y1, int x2, int y2);
     void addSpecialStarToPoint(int x, int y);
-    void addGraphicsItems();
+    void drawChessboard();
     bool xInChessboard(int x);
     bool yInChessboard(int y);
 
-    void initBoardSet();
-    void addToBoardSet(ChesspieceModel *pChesspieceModel);
+    void initChesspieceSet();
+    void addToChesspieseSet(ChesspieceModel *pChesspieceModel);
 
 private:
     QGraphicsScene *m_pGraphicsScene;
@@ -63,7 +63,7 @@ private:
 
     // controller:
     ChessboardModel m_ChessboardModel;
-    QSet<QGraphicsPixmapItem*> m_BoardSet;
+    QSet<QGraphicsPixmapItem*> m_ChesspieceSet;
 
 
 signals:

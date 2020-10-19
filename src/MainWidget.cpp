@@ -12,7 +12,7 @@
 MainWidget::MainWidget(QWidget *parent) : QWidget(parent),
     m_unitLength(UNITLENGTH)
 {
-    initBoardSet();
+    initChesspieceSet();
 
     setFixedSize(WIDTH, HEIGHT);
 
@@ -36,7 +36,7 @@ MainWidget::MainWidget(QWidget *parent) : QWidget(parent),
     m_pGraphicsScene = new QGraphicsScene();
     pGraphicsView->setScene(m_pGraphicsScene);
 
-    addGraphicsItems();
+    drawChessboard();
 
 
 ///////////////////////////////////////////////////////////////////
@@ -64,7 +64,7 @@ MainWidget::MainWidget(QWidget *parent) : QWidget(parent),
 
 MainWidget::~MainWidget()
 {
-    foreach (QGraphicsPixmapItem* pItem, m_BoardSet) {
+    foreach (QGraphicsPixmapItem* pItem, m_ChesspieceSet) {
         m_pGraphicsScene->removeItem(pItem);
         delete pItem;
     }
@@ -79,7 +79,7 @@ void MainWidget::drawChessPieces()
 
 void MainWidget::onStartClicked()
 {
-    foreach (QGraphicsPixmapItem* pItem, m_BoardSet) {
+    foreach (QGraphicsPixmapItem* pItem, m_ChesspieceSet) {
         m_pGraphicsScene->addItem(pItem);
     }
 }
@@ -117,7 +117,7 @@ void MainWidget::addSpecialStarToPoint(int x, int y)
     addLineInChessboard(xx + n, yy - n, xx + 4 * n, yy - n);
 }
 
-void MainWidget::addGraphicsItems()
+void MainWidget::drawChessboard()
 {
     // draw the vertical lines
     addLine(0, 0, 0, m_unitLength * 9);
@@ -161,16 +161,16 @@ bool MainWidget::yInChessboard(int y)
     return y >= 0 && y <= m_unitLength * 9;
 }
 
-void MainWidget::initBoardSet()
+void MainWidget::initChesspieceSet()
 {
     QSet<ChesspieceModel *> set = m_ChessboardModel.getAllChesspieces();
     foreach (ChesspieceModel *pChesspieceModel, set) {
         pChesspieceModel->reSet();
-        addToBoardSet(pChesspieceModel);
+        addToChesspieseSet(pChesspieceModel);
     }
 }
 
-void MainWidget::addToBoardSet(ChesspieceModel *pChesspieceModel)
+void MainWidget::addToChesspieseSet(ChesspieceModel *pChesspieceModel)
 {
     int gap = 2;
 
@@ -189,5 +189,5 @@ void MainWidget::addToBoardSet(ChesspieceModel *pChesspieceModel)
 
     qDebug() << pChesspieceModel->name() << "---" << x << "---" << y;
     qDebug() << pChesspieceModel->name() << "---" << pItem->pos().x() << "---" << pItem->pos().y();
-    m_BoardSet.insert(pItem);
+    m_ChesspieceSet.insert(pItem);
 }
