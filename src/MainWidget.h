@@ -60,8 +60,6 @@ private:
 
     int m_unitLength;
 
-
-    // controller:
     ChessboardModel m_ChessboardModel;
     QSet<QGraphicsPixmapItem*> m_ChesspieceSet;
 
